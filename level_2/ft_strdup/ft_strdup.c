@@ -3,33 +3,49 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alicigar < alicigar@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: alicigar <alicigar@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/21 18:23:36 by alicigar          #+#    #+#             */
-/*   Updated: 2025/03/21 18:33:13 by alicigar         ###   ########.fr       */
+/*   Created: 2025/04/07 21:09:11 by alicigar          #+#    #+#             */
+/*   Updated: 2025/04/07 21:09:19 by alicigar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return(i);
+}
 
 char    *ft_strdup(char *src)
 {
 	char	*dup;
-	int	len;
 	int	i;
-
-	len = 0;
+	
 	i = 0;
-	while (src[len])
-		len++;
-	dup = malloc (sizeof(char) * len + 1);
-	if (!dup)
-		return (NULL);
+	dup = malloc (ft_strlen(src) + 1 * sizeof(char));
 	while (src[i])
 	{
 		dup[i] = src[i];
 		i++;
 	}
-	dup[i] = 0;
+	dup[i] = '\0';
 	return (dup);
 }
+
+/*#include <stdio.h>
+
+int	main(void)
+{
+	char *str = "Hello World";
+	char *dup;
+	dup = ft_strdup(str); 
+	printf("%s\n", dup);
+	free (dup);
+	return (0);
+}*/
