@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ulstr.c                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alicigar < alicigar@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 23:11:26 by alicigar          #+#    #+#             */
-/*   Updated: 2025/04/08 23:26:23 by alicigar         ###   ########.fr       */
+/*   Created: 2025/04/08 23:31:12 by alicigar          #+#    #+#             */
+/*   Updated: 2025/04/09 00:00:17 by alicigar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ulstr(char *s)
+int	ft_atoi(const char *str)
 {
-	while (*s)
+	int n;
+	int	neg;
+
+	n = 0;
+	neg = 1;
+	while (*str < 33)
+		str++;
+	if (*str == '-' || *str == '+')
 	{
-		if (*s >= 'A' && *s <= 'Z')
-			*s = *s + 32;
-		else if (*s >= 'a' && *s <= 'z')
-			*s = *s - 32;
-		write (1, s, 1);
-		s++;
+		if (*str == '-')
+			neg = neg * -1;
+		str++;
 	}
+	while (*str >= '0' && *str <= '9')
+	{
+		n = n * 10 + (*str - '0');
+		str++;
+	}
+	return (n * neg);
 }
 
-int	main (int argc, char **argv)
+/*#include <stdio.h>
+
+int	main (void)
 {
-	if (argc == 2)
-		ulstr(argv[1]);
-	write (1, "\n", 1);
+	char *str = "-487";
+	printf ("%i\n", ft_atoi(str));
 	return (0);
-}
+}*/
