@@ -12,26 +12,25 @@
 
 #include <unistd.h>
 
-void	repeat_alpha(char *s)
+void	repeat_alpha(char *str)
 {
-	int num;
-	int	i;
+	int repeat;
+	repeat = 0;
 
-	while (*s)
+	while (*str)
 	{
-		if (*s >= 'A' && *s <= 'Z')
-			num = *s - 64;
-		else if (*s >= 'a' && *s <= 'z')
-			num = *s - 96;
+		if (*str >= 'A' && *str <= 'Z')
+			repeat = *s - 64;
+		else if (*str >= 'a' && *str <= 'z')
+			repeat = *s - 96;
 		else
-			num = 1;
-		i = 0;
-		while (num > i)
+			repeat = 1;
+		while (repeat > 0)
 		{
-			write(1, s, 1);
-			i++;
+			write(1, str, 1);
+			repeat--;
 		}
-		s++;
+		str++;
 	}
 }
 
