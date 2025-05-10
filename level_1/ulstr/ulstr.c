@@ -14,14 +14,17 @@
 
 void	ulstr(char *s)
 {
-	while (*s)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
-		if (*s >= 'A' && *s <= 'Z')
-			*s = *s + 32;
-		else if (*s >= 'a' && *s <= 'z')
-			*s = *s - 32;
-		write (1, s, 1);
-		s++;
+		if (s[i] >= 'A' && s[i] <= 'Z')
+			s[i] = s[i] + 32;
+		else if (s[i] >= 'a' && s[i] <= 'z')
+			s[i] = s[i] - 32;
+		write (1, &s[i], 1);
+		i++;
 	}
 }
 
