@@ -16,28 +16,28 @@
 
 void	do_op(char *num1, char *op, char *num2)
 {
-	int	a = atoi(num1);
-	int	b = atoi(num2);
+	int	num1 = atoi(a);
+	int	num2 = atoi(b);
 	int	r = 0;
 
 	if (*op == '+')
-		r = a + b;
+		r = num1 + num2;
 	else if (*op == '-')
-		r = a - b;
+		r = num1 - num2;
 	else if (*op == '*')
-		r = a * b;
+		r = num1 * num2;
 	else if (*op == '/')
-		r = a / b;
+		r = num1 / num2;
 	else if (*op == '%')
-		r = a % b;
+		r = num1 % num2;
 	printf("%d\n", r);
 }
 
 int	main(int argc, char **argv)
 {
-	if (argc != 4)
-		write (1, "\n", 1);
-	else
+	if (argc == 4)
 		do_op(argv[1], argv[2], argv[3]);
+	else
+		write (1, "\n", 1);
 	return(0);
 }
