@@ -2,15 +2,18 @@
 
 void    camel_to_snake(char *s)
 {
-    while (*s)
+    int    i;
+
+    i = 0;
+    while (s[i])
     {
-        if (*s >= 'A' && *s <= 'Z')
+        if (s[i] >= 'A' && s[i] <= 'Z')
         {
-            *s = *s + 32;
             write (1, "_", 1);
+            s[i] = s[i] + 32;
         }
-        write (1, s, 1);
-        s++;        
+        write (1, &s[i], 1);
+        i++;        
     }
 }
 
