@@ -24,12 +24,16 @@ char    *ft_strcpy(char *s1, char *s2)
 	return (s1);
 }
 
-/*#include <stdio.h>
+/*
+#include <stdio.h>
+#include <string.h>
 
-int	main (void)
+int main(void)
 {
-	char s1[100];
-	char	*s2 = "Hello World";
+	char s1[50];
+	char *s2 = "Hello";
 	printf("%s\n", ft_strcpy(s1, s2));
-	return (0);
-}*/
+	printf("%s\n", strcpy(s1, s2));
+	return(0);
+}
+*/
