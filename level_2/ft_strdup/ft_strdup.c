@@ -12,12 +12,12 @@
 
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+int	ft_strlen(char *src)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (src[i])
 		i++;
 	return(i);
 }
@@ -28,7 +28,7 @@ char    *ft_strdup(char *src)
 	int	i;
 	
 	i = 0;
-	dup = malloc (ft_strlen(src) + 1 * sizeof(char));
+	dup = malloc (ft_strlen(src) + 1);
 	while (src[i])
 	{
 		dup[i] = src[i];
@@ -38,14 +38,13 @@ char    *ft_strdup(char *src)
 	return (dup);
 }
 
-/*#include <stdio.h>
+/*
+#include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	char *str = "Hello World";
-	char *dup;
-	dup = ft_strdup(str); 
-	printf("%s\n", dup);
-	free (dup);
-	return (0);
+	char *str = "coconut";
+	printf("%s\n", ft_strdup(str));
+	printf("%s\n", strdup(str));
 }*/
