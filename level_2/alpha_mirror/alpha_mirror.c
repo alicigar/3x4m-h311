@@ -2,35 +2,20 @@
 
 void    alpha_mirror(char *c)
 {
-    int i;
-
-    i = 0;
-    while (c[i])
+    while (*c)
     {
         if (c[i] >= 65 && c[i] <= 90)
-        {
-            c[i] = c[i] - 65;
-            c[i] = 90 - c[i];
-            write (1, &c[i], 1);
-        }
+            *c = 90 - (*c - 65);
         else if (c[i] >= 97 && c[i] <= 122)
-        {
-            c[i] = c[i] - 97;
-            c[i] = 122 - c[i];
-            write (1, &c[i], 1);
-        }
-        else
-            write (1, &c[i], 1);
-        i++;
+            *c = 122 - (*c - 97);
+        write (1, &c[i], 1);
+        c++;
     }
-    write (1, "\n", 1);
 }
 
 int main (int argc, char **argv)
 {
-    if (argc != 2)
-        write (1, "\n", 1);
-    else
+    if (argc == 2)
         alpha_mirror(argv[1]);
-    return (0);
+    write (1, "\n", 1);
 }
