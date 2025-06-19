@@ -9,7 +9,7 @@ void    rstr_capitalizer(char *str)
     {
         if (str[i] >= 'A' && str[i] <= 'Z')
             str[i] = str[i] + 32;
-        if (str[i] >= 'a' && str[i] <= 'z' && str[i + 1] < 33)
+        if ((str[i] >= 'a' && str[i] <= 'z') && (str[i + 1] == 9 || str[i + 1] == 32 || str[i + 1] == 0))
             str[i] = str[i] - 32;
         write(1, &str[i], 1);
         i++;
