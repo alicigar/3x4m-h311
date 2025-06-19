@@ -22,7 +22,7 @@ void	rev_wstr(char *str)
 			write(1, &str[start], 1);
 			start++;
 		}
-		if(i > 1)
+		if(i >= 0)
 			write(1, " ", 1);
 	}
 }
