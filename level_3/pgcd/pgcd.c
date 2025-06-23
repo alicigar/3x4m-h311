@@ -32,3 +32,36 @@ int main(int argc, char **argv)
 		pgcd(argv[1], argv[2]);
 	write(1, "\n", 1);
 }
+
+
+/* segunda opción:
+
+#include <stdlib.h>
+#include <unistd.h>
+
+int	pgcd(char *n1, char *n2)
+{
+	int	num1 = atoi(n1);
+	int	num2 = atoi(n2);
+	int	i = num1;
+
+	while (i != 1)
+	{
+		if(num1 % i == 0 && num2 % i == 0)
+			return (i);
+		i--;
+	}
+	return (i);
+}
+
+#include <stdio.h>
+
+int	main(int argc, char **argv)
+{
+	if (argc != 3)
+		write (1, "\n", 1);
+	else
+		printf("%d\n", pgcd(argv[1], argv[2]));
+	return (0);
+}
+*/
