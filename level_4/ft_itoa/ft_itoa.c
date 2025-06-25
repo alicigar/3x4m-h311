@@ -2,7 +2,7 @@
 
 char	*ft_itoa(int nbr)
 {
-	long	n = nbr;
+	int	n = nbr;
 	int	len = 0;
 	char * result;
 	
@@ -25,16 +25,12 @@ char	*ft_itoa(int nbr)
 	if (nbr < 0)
 	{
 		result[0] = '-';
-		n = -(long)nbr;
+		nbr = -nbr;
 	}
-	else
-		n = nbr;
-	int	i = len - 1;
-	while (n)
+	while (nbr)
 	{
-		result[i] = n % 10 + '0';
-		n = n / 10;
-		i--;
+		result[--len] = nbr % 10 + '0';
+		nbr = nbr / 10;
 
 	}
 	return (result);
