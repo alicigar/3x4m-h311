@@ -9,12 +9,12 @@ void	rev_wstr(char *str)
 	while (str[i])
 		i++;
 	i--;
-	while (str[i])
+	while (i >= 0)
 	{
-		while (str[i] && (str[i] == ' ' || str[i] == '\t'))
+		while (i >= 0 && (str[i] == ' ' || str[i] == '\t'))
 			i--;
 		end = i;
-		while (str[i] && str[i] != ' ' && str[i] != '\t')
+		while (i >= 0 && str[i] != ' ' && str[i] != '\t')
 			i--;
 		start = i + 1;
 		while (start <= end)
@@ -22,7 +22,7 @@ void	rev_wstr(char *str)
 			write(1, &str[start], 1);
 			start++;
 		}
-		if(i > 1)
+		if (i >= 0)
 			write(1, " ", 1);
 	}
 }
