@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 	neg = 1;
 	while (*str < 33)
 		str++;
-	if (*str == '-' || *str == '+')
+	while (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
 			neg = neg * -1;
