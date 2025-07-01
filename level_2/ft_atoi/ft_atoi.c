@@ -12,17 +12,15 @@
 
 int	ft_atoi(const char *str)
 {
-	int n;
-	int	neg;
+	int n = 0;
+	int	neg = 1;
 
-	n = 0;
-	neg = 1;
 	while (*str < 33)
 		str++;
-	while (*str == '-' || *str == '+')
+	if (*str == '-' || *str == '+')
 	{
 		if (*str == '-')
-			neg = neg * -1;
+			neg = -neg;
 		str++;
 	}
 	while (*str >= '0' && *str <= '9')
@@ -33,11 +31,15 @@ int	ft_atoi(const char *str)
 	return (n * neg);
 }
 
-/*#include <stdio.h>
+/*
+#include <stdio.h>
+#include <stdlib.h>
 
 int	main (void)
 {
 	char *str = "-487";
+ 	printf ("%i\n", atoi(str));
 	printf ("%i\n", ft_atoi(str));
 	return (0);
-}*/
+}
+*/
