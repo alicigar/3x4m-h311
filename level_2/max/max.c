@@ -1,19 +1,18 @@
 int max(int *tab, unsigned int len)
 {
-    int max_val;
-    unsigned int i = 0;
-    
-    if (len == 0)
-        return 0;
-    
-    max_val = tab[0];
-    while (i < len)
-    {
-        if (tab[i] > max_val)
-            max_val = tab[i];
-        i++;
-    }
-    return (max_val);
+	if (len == 0)
+		return (0);
+
+	int	max_value = tab[0];
+	unsigned int	i = 0;
+
+	while (i < len)
+	{
+		if (tab[i] > max_value)
+			max_value = tab[i];
+		i++;
+	}
+	return (max_value);
 }
 
 /*#include <stdio.h>
