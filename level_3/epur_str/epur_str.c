@@ -19,7 +19,7 @@ void	epur_str(char *str)
 			}
 			write(1, &str[i], 1);
 		}
-	i++;
+		i++;
 	}
 }
 
