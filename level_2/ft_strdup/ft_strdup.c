@@ -14,9 +14,7 @@
 
 int	ft_strlen(char *src)
 {
-	int	i;
-
-	i = 0;
+	int	i = 0;
 	while (src[i])
 		i++;
 	return(i);
@@ -25,9 +23,8 @@ int	ft_strlen(char *src)
 char    *ft_strdup(char *src)
 {
 	char	*dup;
-	int	i;
-	
-	i = 0;
+	int	i = 0;
+
 	dup = malloc (ft_strlen(src) + 1);
 	while (src[i])
 	{
