@@ -14,5 +14,5 @@ void	print_bits(unsigned char octet)
 
 /*int	main(void)
 {
-	print_bits(2);
+	print_bits(3);
 }*/
