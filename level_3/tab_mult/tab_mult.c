@@ -15,7 +15,7 @@ void ft_putnbr(int num)
 {
     if (num > 9)
         ft_putnbr(num / 10);
-    write(1, &"0123456789"[n % 10], 1);
+    write(1, &"0123456789"[num % 10], 1);
 }
 
 void    tab_mult (char *str)
@@ -33,7 +33,7 @@ void    tab_mult (char *str)
         write(1, " x ", 3);
         ft_putnbr(number);
         write(1, " = ", 3);
-        r = i * n;
+        r = i * num;
         ft_putnbr(r);
         i++;
         write(1, "\n", 1);
