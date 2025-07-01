@@ -26,7 +26,9 @@ size_t	ft_strspn(const char *s, const char *accept)
 
 int	main(void)
 {
-	printf("%lu\n", ft_strspn("hello123", "helo"));
-	printf("%lu\n", strspn("hello123", "helo"));
+	printf("%lu\n", ft_strspn("12345abc", "helo"));
+	printf("%lu\n", strspn("1234567890", "helo"));
 }*/
-/*Ejemplo: si *s es "hello123" y *accept "helo", devuelve (i) que es "5"*/
+/*Ejemplo: si *s es "hello123" y *accept "helo", devuelve (i) que es "5"
+Osea, recorrer y cuenta *s hasta el caracter que aparece en accept*
+*/
