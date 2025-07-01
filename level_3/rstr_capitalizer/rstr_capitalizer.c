@@ -18,14 +18,12 @@ int	main(int argc, char **argv)
 {
 	int	i = 1;
 	
-	if (argc == i)
+	if (argc == 1)
 		write(1, "\n", 1);
-
 	while (i < argc)
 	{
 		rstr_capitalizer(argv[i]);
 		write(1, "\n", 1);
 		i++;
 	}
-
 }
