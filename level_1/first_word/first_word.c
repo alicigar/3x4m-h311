@@ -2,9 +2,7 @@
 
 void first_word(char *str)
 {
-    int i;
-
-    i = 0;
+    int i = 0;
     while (str[i] == 9 || str[i] == 32)
         i++;
     while (str[i] && str[i] > 32)
