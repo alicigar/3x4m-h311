@@ -9,25 +9,14 @@ void print_hex(int n)
 
 int ft_atoi(char *str)
 {
-    int n;
-    int neg;
-
-    n = 0;
-    neg = 1;
-    while (*str < 33)
-        str++;
-    if (*str == '-' || *str == '+')
-    {
-        if (*str == '-')
-            neg = -1;
-        str++;
-    }  
+    int n = 0;
+    
     while (*str >= '0' && *str <= '9')
     {
         n = n * 10 + (*str - '0');
         str++;
     }
-    return (n * neg);
+    return (n);
 }
 
 int main(int argc, char **argv)
