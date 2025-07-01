@@ -19,9 +19,8 @@ int	main(int argc, char **argv)
 {
 	int	i = 1;
 	
-	if (argc == i)
+	if (argc == 1)
 		write(1, "\n", 1);
-
 	while (argc > i)
 	{
 		str_capitalizer(argv[i]);
@@ -29,3 +28,5 @@ int	main(int argc, char **argv)
 		i++;
 	}
 }
+/* por qué [i - 1] == 9 etc...? porque el espacio/tab/nulo está ANTES de la capitalización, i es lo que vamos a transformar
+ y queremos indicar donde está el espacio/tab/nulo para poder realizar el cambio en la posición adecuada. */
