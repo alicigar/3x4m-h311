@@ -22,10 +22,10 @@ int ft_atoi_base(const char *str, int str_base)
 		else if (*str >= '0' && *str <= '9')
 			digit = *str - '0';
 		else
-			break;  // Carácter inválido, terminar conversión
+			break ;  // Carácter inválido, terminar conversión
 	// Verificar que el dígito es válido para la base
 		if (digit >= str_base)
-			break;
+			break ;
 
 		// Acumular el resultado
 		result = result * str_base + digit;
