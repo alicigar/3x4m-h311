@@ -7,7 +7,7 @@ void first_word(char *str)
         i++;
     while (str[i] && str[i] > 32)
     {
-        write (1, &str[i], 1);
+        write(1, &str[i], 1);
         i++;
     }
 }
