@@ -4,9 +4,9 @@ void    alpha_mirror(char *c)
 {
     while (*c)
     {
-        if (*c >= 65 && *c <= 90)
+        if (*c >= 'A' && *c <= 'Z')
             *c = 90 - (*c - 65);
-        else if (*c >= 97 && *c <= 122)
+        else if (*c >= 'a' && *c <= 'z')
             *c = 122 - (*c - 97);
         write(1, c, 1);
         c++;
