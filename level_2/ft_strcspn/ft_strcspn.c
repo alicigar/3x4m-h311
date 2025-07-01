@@ -30,5 +30,5 @@ int	main(void)
 }*/
 
 /*ejemplo: si *s es "hello123" y *reject es "0123456789", devuelve (i) que es 5.
-Básicamente, cuenta los caracteres de *s hasta encontrar uno que aparezca en *reject.
+Cuenta los caracteres de *s que no aparecen en *reject, hasta que haya coincidencia.
 Si no hay coincidencias, recorre *s y cuenta lo que mide.*/
