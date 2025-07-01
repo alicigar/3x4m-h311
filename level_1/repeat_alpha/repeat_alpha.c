@@ -14,8 +14,7 @@
 
 void	repeat_alpha(char *str)
 {
-	int repeat;
-	repeat = 0;
+	int repeat = 0;
 
 	while (*str)
 	{
