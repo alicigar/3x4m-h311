@@ -35,7 +35,7 @@ int	is_prime(int n)
 	if (n < 2)
 		return (0);
 	i = 2;
-	while (i <= n)
+	while (i * i <= n)
 	{
 		if (n % i == 0)
 			return (0);
