@@ -20,4 +20,4 @@ unsigned int    lcm(unsigned int a, unsigned int b)
 int     main(void)
 {
         printf("%d\n", lcm(3, 5));
-}
+}*/
