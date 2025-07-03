@@ -41,7 +41,7 @@ int	main()
 	int	i = 0;
 
 	while (i < 4)
-		printf("%d", arr[i++]);
+		printf("%d\n", arr[i++]);
 	free(arr);
  	return(0);
 }*/
