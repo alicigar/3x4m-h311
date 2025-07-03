@@ -37,13 +37,11 @@ int	*ft_rrange(int start, int end)
 
 int	main()
 {
-	int	*arr = ft_rrange(0, 4);
-	int	size = 0;
+	int	*arr = ft_rrange(0, -3);
+	int	i = 0;
 
-	while (size < 5)
-	{
-		printf("%i ", arr[size]);
-		size++;
-	}
+	while (i < 4)
+		printf("%d", arr[i++]);
 	free(arr);
+ 	return(0);
 }*/
