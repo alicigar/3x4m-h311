@@ -6,6 +6,7 @@ void	rostring(char *str)
 	int	start = 0;
 	int	end = 0;
 	int	space = 0;
+	int	word = 0;
 
 	while (str[i] == 9 || str[i] == 32)
 		i++;
@@ -28,15 +29,13 @@ void	rostring(char *str)
 				write(1, " ", 1);
 				space = 0;
 			}
+			word = 1;
 			write(1, &str[i], 1);
 		}
 		i++;
 	}
-	while (str[i] == 0)
-	{
+	if (str[i] == 0 && word == 1)
 		write (1, " ", 1);
-		i++;
-	}
 	while (start <= end)
 	{
 		write(1, &str[start], 1);
