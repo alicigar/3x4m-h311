@@ -20,7 +20,7 @@ char	*ft_strrev(char *str)
 
 /*#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	main(void)
 {
 	char s[] = "papafrita";
 	printf("%s\n", ft_strrev(s));
