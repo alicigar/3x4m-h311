@@ -6,7 +6,7 @@ char  *rev_print(char *str)
 	while(str[i])
 		i++;
 	i--;
-  while(i > 0)
+  	while(i > 0)
 	{
 		write(1, &str[i], 1);
 		i--;
