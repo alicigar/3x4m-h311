@@ -19,9 +19,9 @@ void	repeat_alpha(char *str)
 	while (*str)
 	{
 		if (*str >= 'A' && *str <= 'Z')
-			repeat = *s - 64;
+			repeat = *str - 64;
 		else if (*str >= 'a' && *str <= 'z')
-			repeat = *s - 96;
+			repeat = *str - 96;
 		else
 			repeat = 1;
 		while (repeat > 0)
