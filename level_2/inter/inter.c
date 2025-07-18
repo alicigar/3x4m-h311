@@ -2,8 +2,8 @@
 
 void    ft_inter(char *str1, char *str2)
 {
-    int     ascii_str1[256] = {0}; // Para marcar caracteres vistos en s1
-    int     ascii_str2[256] = {0}; // Para marcar caracteres vistos en s2
+    unsigned char     ascii_str1[256] = {0}; // Para marcar caracteres vistos en s1
+    unsigned char     ascii_str2[256] = {0}; // Para marcar caracteres vistos en s2
     int     i = 0;
 
     while (str2[i])
