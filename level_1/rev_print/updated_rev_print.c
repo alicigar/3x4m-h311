@@ -26,6 +26,6 @@ char  *rev_print(char *str)
 	 return (0);
 }*/
 
-//demostrado científicamente, que hace unas semanas este ejercicio ya no es char  *rev_print(char *str), es char  *rev_print(char *str)
+//este ejercicio ya no cae con la versión void	rev_print(char *str), pide un char  *rev_print(char *str)
 //se puede realizar haciendo tal cual ft_strrev del segundo nivel porque piden lo mismo, o de esta forma más corta, ya que te deja usar la función "write" y en el otro no.
-//el main con tal cual esos ejemplos te los dan en el subject para que tú compruebes, pero no se entrega ya que te pide una FUNCIÓN.
+//el main con tal cual esos ejemplos es el propio subject, para que tú compruebes, pero no se entrega ya que te pide una FUNCIÓN.
