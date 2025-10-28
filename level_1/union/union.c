@@ -19,7 +19,7 @@ void	ft_union(char *str1, char *str2)
         {
                 if (ascii[(int)str2[i]] == 0)
                 {
-			ascii[(int)str2[i]] = 1;
+					ascii[(int)str2[i]] = 1;
                 	write(1, &str2[i], 1);
                 }
                	i++;
@@ -32,3 +32,4 @@ int	main(int argc, char **argv)
 		ft_union(argv[1], argv[2]);
 	write(1, "\n", 1);
 }
+
